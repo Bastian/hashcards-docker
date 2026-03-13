@@ -25,7 +25,7 @@ For example with docker compose:
 # compose.yml
 services:
   hashcards:
-    image: ghcr.io/Bastian/hashcards-docker:latest
+    image: ghcr.io/bastian/hashcards-docker:latest
     ports:
       - "3000:3000"
     volumes:
