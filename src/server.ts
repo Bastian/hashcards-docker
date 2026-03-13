@@ -188,8 +188,8 @@ const server = Deno.serve(
       return proxyRequest(req);
     }
 
-    // POST /start -> launch hashcards, then redirect into it.
-    if (new URL(req.url).pathname === "/start" && req.method === "POST") {
+    // POST / -> launch hashcards, then redirect into it.
+    if (req.method === "POST") {
       const result = await startHashcards();
       if (result.ready) {
         return new Response(null, {
