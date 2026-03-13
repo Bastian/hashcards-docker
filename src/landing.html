@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>hashcards</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family:
+          "TeX Gyre Termes", "Nimbus Roman No9 L", "Times New Roman", serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #fcfcfc;
+      }
+      .container {
+        text-align: center;
+      }
+      h1 {
+        font-size: 48px;
+        margin-bottom: 48px;
+      }
+      .message {
+        font-size: 20px;
+        color: #666;
+        margin-bottom: 32px;
+        font-family: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+      }
+      button {
+        -webkit-appearance: none;
+        appearance: none;
+        background: white;
+        border: 1px solid #999;
+        padding: 14px 48px;
+        font-size: 20px;
+        color: black;
+        font-family: system-ui, -apple-system, "Helvetica Neue", sans-serif;
+        font-weight: 600;
+        border-radius: 6px;
+        cursor: pointer;
+        box-shadow: #ccc 0px 1px 3px 0px;
+        transition:
+          background-color 0.15s,
+          border-color 0.15s,
+          box-shadow 0.15s;
+      }
+      button:hover {
+        background: #f0f0f0;
+        border-color: #777;
+        box-shadow: #bbb 0px 2px 5px 0px;
+      }
+      button:active {
+        background: #e4e4e4;
+        border-color: #666;
+        box-shadow: #ddd 0px 0px 2px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>hashcards</h1>
+      {{message}}
+      <form method="POST" action="/start">
+        <button type="submit">Start Drilling</button>
+      </form>
+    </div>
+  </body>
+</html>

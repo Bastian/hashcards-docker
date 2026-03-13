@@ -1,0 +1,10 @@
+services:
+  hashcards:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - /path/to/your/cards:/data
+    # environment:
+    #   - HASHCARDS_ARGS=--card-limit 50 --from-deck Japanese
+    restart: unless-stopped

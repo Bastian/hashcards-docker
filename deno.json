@@ -1,0 +1,7 @@
+{
+  "exclude": ["example_cards/"],
+  "tasks": {
+    "dev": "deno run -A src/server.ts",
+    "check": "deno fmt --check && deno lint && deno check"
+  }
+}
